@@ -9,60 +9,65 @@
     <!-- <link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.theme.default.min.css"> -->
 
+      <!--CDN E ARQUIVO JS DO TAILWIND-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+
   </head>
 
   <body>
     <header> <!-- AREA DOS LINKS - HEADER -->
 
-      <div class="flex items-center justify-around p-5">
+      <div class="flex justify-between items-center px-5 h-16"> <!--DIV GERAL DO HEADER flex items-center justify-around p-5 -->
 
-        <div class="w-32 h-3.3 flex">
+        <div class="w-32 h-9"> <!--DIV GERAL DA IMAGEM  w-32 h-3.3 flex-->
 
           <img src="imagens/logo.png" alt="logo-samar" />
 
+        </div> <!--font-semibold flex -->
+        
+        <!--ICONE DO HABURGUER-->
+        <div class="cursor-pointer" onclick="MenuNavBar()">
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+
         </div>
+        
+        <nav id="menu" class="hidden"> <!--DIV GERAL DA NAV flex space-x-7 text-sm items-center-->
 
-        <div class="font-semibold flex">
+          <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
+            Home
+            <i class="fas fa-angle-down fa-xs ml-1"></i>
+          </a>
 
-          <nav class="flex space-x-7 text-sm items-center">
+          <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
+            Pages <i class="fas fa-angle-down fa-xs ml-1"></i>
+          </a>
 
-            <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
-              Home
-              <i class="fas fa-angle-down fa-xs ml-1"></i>
-            </a>
+          <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
+            Services <i class="fas fa-angle-down fa-xs ml-1"></i>
+          </a>
+          
+          <a href="#"
+            class="hover:text-indigo-500 transition duration-300 ease-in-out"
+            >Post Layout<i class="fas fa-angle-down fa-xs ml-1"></i>
+          </a>
 
-            <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
-              Pages <i class="fas fa-angle-down fa-xs ml-1"></i>
-            </a>
+          <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out"
+            >Blog<i class="fas fa-angle-down fa-xs ml-1"></i>
+          </a>
 
-            <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
-              Services <i class="fas fa-angle-down fa-xs ml-1"></i>
-            </a>
-            
-            <a href="#"
-              class="hover:text-indigo-500 transition duration-300 ease-in-out"
-              >Post Layout<i class="fas fa-angle-down fa-xs ml-1"></i>
-            </a>
+          <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out"
+            >Contact Us<i class="fas fa-angle-down fa-xs ml-1"></i>
+          </a>
 
-            <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out"
-              >Blog<i class="fas fa-angle-down fa-xs ml-1"></i>
-            </a>
+        </nav>
 
-            <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out"
-              >Contact Us<i class="fas fa-angle-down fa-xs ml-1"></i>
-            </a>
+        <div class="hidden"> <!--DIV GERAL DO BOTÃO-->
 
-          </nav>
-
-          <button
-            class="bg-indigo-500 text-white py-3 px-6 rounded ml-10 text-sm hover:bg-blue-700 transition duration-300 ease-in-out"
-          >
-            <!-- -->
-
+          <button class="bg-indigo-500 text-white py-3 px-6 rounded ml-10 text-sm hover:bg-blue-700 transition duration-300 ease-in-out">
             <a href="#">
               GET A QUOTE
               <i class="fas fa-angle-right ml-2"></i>
@@ -72,6 +77,7 @@
         </div>
 
       </div>
+
     </header>
 
     <main> <!-- INICIO DO MEU MAIN -->
@@ -758,7 +764,7 @@
 
           <div class="w-full flex flex-col mx-3 mb-6 justify-center items-center sm:w-8/12 bg-indigo-100"> <!--flex  DIV LADO ESQUERDO conf das media querys responsivo -->
 
-            <div class="flex flex-col items-start pr-10"> <!--conf de media query -->
+            <div class="flex flex-col items-start pr-10 sm:justify-start "> <!--conf de media query -->
 
               <h6 class="font-bold text-gray-500/100 text-sm sm:text-base">
                 CONTACT US
@@ -890,7 +896,7 @@
 
                 </label>
 
-                <textarea name="mtxt" id="mtxt" rows="4" class="resize-none focus:outline-none text-gray-500 w-full" placeholder="Messenge">               
+                <textarea name="mtxt" id="mtxt" rows="4" class="resize-none grid-cols-3 :outline-none text-gray-500 w-full" placeholder="Messenge">               
                 </textarea><!--class="focus:outline-none text-gray-500 resize-none w-full-->              
 
               </div>
@@ -922,5 +928,13 @@
 
       <script src="lib/owlCarousel/dist/assets/owl.carousel.min.js"></script> 
     </footer> -->
+
+
+
+
+
+
+    <!--ARQUIVO JAVASCRIPT-->
+    <script src="Javascript/arquivo01.js"></script>
   </body>
 </html>
