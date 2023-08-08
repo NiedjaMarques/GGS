@@ -18,24 +18,46 @@
   </head>
 
   <body>
-    <header> <!-- AREA DOS LINKS - HEADER -->
 
-      <div class="flex justify-between items-center px-5 h-16"> <!--DIV GERAL DO HEADER flex items-center justify-around p-5 -->
+    <!-- AREA DOS LINKS - HEADER -->
+    <header>
+      
+      <!--DIV GERAL DO HEADER-->      
+      <div class="flex items-center px-5 h-16 justify-between w-full"> <!---->
 
-        <div class="w-32 h-9"> <!--DIV GERAL DA IMAGEM  w-32 h-3.3 flex-->
+        <!--DIV GERAL DA IMAGEM-->
+        <div class="w-32 h-9"> <!--w-32 h-3.3 flex font-semibold flex-->
 
           <img src="imagens/logo.png" alt="logo-samar" />
 
-        </div> <!--font-semibold flex -->
-        
-        <!--ICONE DO HABURGUER-->
-        <div class="cursor-pointer" onclick="MenuNavBar()">
-
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
-
         </div>
-        
-        <nav id="menu" class="hidden bg-slate-300 font-semibold flex flex-col items-center space-y-4"> <!--DIV GERAL DA NAV flex space-x-7 text-sm items-center-->
+
+        <!--DIV DO ICONE E O BOTÃO-->
+        <div class="flex items-center md:order-last">            
+          
+          <!--DIV GERAL DO BOTÃO-->
+          <div class="invisible sm:visible mr-5">
+
+            <button class="bg-indigo-500 text-white py-3 px-6 rounded text-sm hover:bg-blue-700 transition duration-300 ease-in-out">
+
+              <a href="#">
+                GET A QUOTE
+                <i class="fas fa-angle-right ml-2"></i>
+              </a>
+
+            </button>
+
+          </div>
+
+          <!--ICONE DO HABURGUER-->
+          <div class="cursor-pointer md:invisible" onclick="MenuNavBar()"> <!--order-last-->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          </div>
+
+        </div>      
+
+        <!--DIV GERAL DA NAV-->
+        <nav id="menu" class="hidden md:inline-block font-semibold md:flex md:flex-row "> <!-- flex space-x-7 text-sm items-center w-full flex -->
 
           <a href="#" class="hover:text-indigo-500 transition duration-300 ease-in-out">
             Home
@@ -63,18 +85,7 @@
             >Contact Us<i class="fas fa-angle-down fa-xs ml-1 bg-indigo-500 text-white"></i>
           </a>
 
-        </nav>
-
-        <div class="hidden"> <!--DIV GERAL DO BOTÃO-->
-
-          <button class="bg-indigo-500 text-white py-3 px-6 rounded ml-10 text-sm hover:bg-blue-700 transition duration-300 ease-in-out">
-            <a href="#">
-              GET A QUOTE
-              <i class="fas fa-angle-right ml-2"></i>
-            </a>
-          </button>
-
-        </div>
+        </nav>       
 
       </div>
 

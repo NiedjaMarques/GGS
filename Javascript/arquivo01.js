@@ -6,7 +6,7 @@ function MenuNavBar() { //função chamada
         menu.style.display = 'block' // ...quando for clicado ele mostra as opções
 
         
-       // menu.classList.add('flex-col'); // Adiciona a classe "flex-col" para exibir como coluna
+       //menu.style.flexDirection = 'column'; // Adiciona a classe "flex-col" para exibir como coluna
         //menu.classList.remove('hidden'); // Remove a classe "hidden" para tornar o menu visível
 
 
