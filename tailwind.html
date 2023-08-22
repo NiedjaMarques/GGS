@@ -38,8 +38,8 @@
 
         </div> 
 
-        <!-- LISTA DOS LINKS -->
-        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in-duration-500">
+        <!-- LISTA DOS LINKS pode ser tambem left-[-400px] -->
+        <ul id="lista" class="hidden md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7"> <!--left-[-400px] transition-all ease-in-duration-700  md:opacity-100 opacity-0  "> -->
 
           <li class="mx-4 my-4 md:my-0">
             <a href="#" class="hover:text-indigo-500 transition duration-500 font-semibold">
@@ -78,27 +78,24 @@
               >Contact Us<i class="fas fa-angle-down fa-xs bg-indigo-500 text-white"></i>
             </a>
           </li>
+          <!---->
 
-          <div class="invisible sm:visible mr-5 "> <!---->
-
-            <button class="bg-indigo-500 text-white py-3 px-6 rounded text-sm hover:bg-blue-700 transition duration-300 ease-in-out">
-
+          <div class="mx-4">
+            <button class="bg-indigo-500 text-white py-3 px-6 rounded text-sm hover:bg-blue-700 transition duration-300 ease-in-out ">
               <a href="#">
                 GET A QUOTE
                 <i class="fas fa-angle-right ml-2"></i>
               </a>
-
             </button>
+          </div>  
 
-          </div>
-
-        </ul>       
+        </ul>           
 
       </nav>
 
     </header>
 
-    <main> <!-- INICIO DO MEU MAIN -->
+    <main class="invisible"> <!-- INICIO DO MEU MAIN -->
 
     <section> <!-- AREA INICIAL DO SITE -->
 

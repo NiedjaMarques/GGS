@@ -1,9 +1,15 @@
 function MenuNavBar() {
-    const menu = document.getElementById("menu");
+    const menu = document.getElementById("menu")
+    let lista = document.getElementById("lista")
 
-    let iconeAtual = 1;
+    if (window.getComputedStyle(lista).display === 'none') { // Se o menu não estiver sendo exibido...
+        lista.style.display = 'block' // ...quando for clicado ele mostra as opções
+        
+     }else{
+        lista.style.display = 'none'; // ...quando clicado novamente, esconde as opções
+    }
+ }
 
-}
 
 
 
