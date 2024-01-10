@@ -1,35 +1,21 @@
-function MenuNavBar() {
-    const menu = document.getElementById("menu")
-    let lista = document.getElementById("lista")
+//COMANDO DE INTERAÇÃO COM MEU MENU
+let header = document.getElementById('header');
+let navigationHeader = document.getElementById('navegation_header');
+let content = document.getElementById('content');
+let showSidebar = false; //interruptor
 
-    if (window.getComputedStyle(lista).display === 'none') { // Se o menu não estiver sendo exibido...
-        lista.style.display = 'block' // ...quando for clicado ele mostra as opções
-        
-     }else{
-        lista.style.display = 'none'; // ...quando clicado novamente, esconde as opções
+function toggleSidebar(){
+    showSidebar = !showSidebar;
+    if (showSidebar) {
+        navigationHeader.classList.remove('translate-x-[-100vw]');
+        navigationHeader.classList.add('translate-x[-10vw]');
+
+    }else{
+        navigationHeader.classList.remove('translate-x[-10vw]');
+        navigationHeader.classList.add('translate-x-[-100vw]');
     }
- }
+}
 
 
-
-
-
-
-
-// function MenuNavBar(e) { //função chamada
-//     const menu = document.getElementById('menu') // Pega o elemento com ID "menu" e armazena na variavel
-
-//     // Verifica se o menu esta oculto no HTML usando a função "window.getComputedStyle(menu)"
-//     if (window.getComputedStyle(menu).display === 'none') { // Se o menu não estiver sendo exibido...
-//         menu.style.display = 'block' // ...quando for clicado ele mostra as opções
-
-        
-//        //menu.style.flexDirection = 'column'; // Adiciona a classe "flex-col" para exibir como coluna
-//         //menu.classList.remove('hidden'); // Remove a classe "hidden" para tornar o menu visível
-
-
-//     } else {
-//         menu.style.display = 'none'; // ...quando clicado novamente, esconde as opções
-//     }
-// }
-
+//quando passo o mouse em cima da ul principal, minha lista de opções apareça
+//pensar na vertical e horizontal
