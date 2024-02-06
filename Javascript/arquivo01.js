@@ -1,3 +1,20 @@
+//acontece quando a pagina é carregada e depois some
+document.addEventListener("DOMContentLoaded", function () {
+    // Esconder o loader e mostrar o conteúdo
+    document.getElementById("loader-wrapper").style.display = "block";
+
+    setTimeout(function () {
+        document.getElementById("loader-wrapper").style.display = "none";
+        document.getElementById("page-wrapper").style.display = "block";
+    }, 750);     
+});
+
+
+
+
+
+
+
 // //COMANDO DE INTERAÇÃO COM MEU MENU
 // let header = document.getElementById('header');
 // let navigationHeader = document.getElementById('navegation_header');
