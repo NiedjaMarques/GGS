@@ -21,847 +21,819 @@
     </style>
   </head>
 
-  <body
-    class="font-sans text-base font-normal bg-[#fff] bg-fixed bg-cover h-[9275.31px] leading-[25.6px]"
-  >
+  <body class="font-sans text-base font-normal bg-[#fff] bg-fixed bg-cover h-[9275.31px] leading-[25.6px]">
+
     <!--DIV APARECE ASSIM QUE A PAGINA É CARREGADA E SOME - id="loader-wrapper" -->
+    <div id="loader-wrapper" class="fixed w-full h-full left-0 top-0 z-[999999999] bg-center bg-no-repeat bg-[80px] bg-[url('/imagens/loading-01.svg')] bg-[#f4f2ff]">
+    </div>
 
-    <div
-      id="loader-wrapper"
-      class="fixed w-full h-full left-0 top-0 z-[999999999] bg-center bg-no-repeat bg-[80px] bg-[url('/imagens/loading-01.svg')] bg-[#f4f2ff]"
-    ></div>
-
-    <div id="page-wrapper" class="h-[9275.31px]">
-      <!--id="page-wrapper-->
+    <div id="page-wrapper" class="">
 
       <!--Header-->
+      <header class="h-[90.2446px] fixed z-[9999] w-full">
 
-      <header class="h-[90.2446px] absolute z-[9999] w-full">
         <!-- Main Header -->
+        <div class="container mx-auto px-4">
 
-        <div class="h-[90.2446px] lg:flex-nowrap lg:justify-start">
-          <div class="h-[90.2446px] relative">
-            <div class="h-[90.2446px] mx-[94.3478px] px-[15px] relative">
-              <!-- Website Logo -->
+          <div class="flex justify-between items-center">
 
-              <div class="table float-left h-[90px] relative w-[130px] z-[9]">
-                <a href="" class="table-cell align-middle">
-                  <img
-                    src="imagens/logo.png"
-                    alt=""
-                    class="inline max-w-full overflow-y-clip overflow-x-clip"
-                  />
+            <!-- Website Logo -->
+            <a href="#" class="align-middle">
+              <img src="imagens/logo.png" alt="" class="inline max-w-full overflow-y-clip overflow-x-clip"/>
+            </a>
+
+            <!-- Barra de navegação -->
+            <ul class="lg:flex items-center justify-between flex-wrap hidden">
+              
+              <!--MENU HOME-->
+              <li class="h-[90.2446px] w-[75.163px] relative list-item group">
+                
+                <a href="" class="w-[75.163px] h-[90.2446px] py-[35px] px-[12px] relative inline-block font-medium">
+
+                  <span class="h-[20.24px] w-[40.29px] inline-block text-[15px]">
+                    Home
+                  </span>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]">
+                      <path fill-rule="evenodd"
+                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+                  </svg>
                 </a>
-              </div>
 
-              <!-- Nav Toggle Button -->
-              <button
-                id="esconder"
-                class="float-right h-[18px] justify-end my-[36px] ml-[15px] relative w-[20px]"
-              >
-                <span
-                  class="bg-slate-500 block absolute h-[2px] top-0 w-full"
-                ></span>
-                <span
-                  class="bg-slate-500 block h-[2px] absolute top-[7px] w-full"
-                ></span>
-                <span
-                  class="bg-slate-500 block h-[2px] absolute top-[14px] w-full"
-                ></span>
-              </button>
+                <!--SUB MENU HOME-->
+                <ul class="h-[141.984px] bg-white shadow-2xl py-[5px] mt-[20px] absolute visible w-[220px] z-[10] transition-opacity opacity-0 group-hover:opacity-100">
+                  
+                  <li class="h-[43.9946px] relative">
 
-              <!--Extra Nav-->
-              <div
-                class="items-center flex float-right h-[90px] ml-[20px] relative z-[9] w-[155px]"
-              >
-                <div class="h-[42.5272px] w-[155px]">
-                  <a
-                    href=" "
-                    class="h-[16.788px] inline-block h-[42.5272px] py-[12px] px-[25px] w-[155px] font-medium text-[14px] text-center leading-4 uppercase align-middle border-x-[1px] border-y-[1px]"
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Home 1
+                    </a>
+
+                  </li>
+
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Home 2
+                    </a>
+
+                  </li>
+
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Home 3
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <!--MENU PAGES-->
+              <li class="h-[90.2446px] relative w-[76.7935px] group">
+
+                <a href="" class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[76.7935px] text-[15px] font-medium">
+
+                  <span class="h-[20.2446px] w-[41.93px] inline-block">
+                    Pages
+                  </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
                   >
-                    Get A Quote
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
 
+                <!--SUB MENU ABOUT US 1-->
+                <ul class="h-[317.962px] shadow-2xl bg-white py-[5px] absolute block w-[220px] z-[10] mt-[20px] transition-opacity opacity-0 group-hover:opacity-100">
+
+                  <!--SUB MENU ABOUT US 2-->
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      About Us
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                    
+                    <ul class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          About Us 1
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          About Us 2
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          About Us 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <!--SUB MENU FAQ-->
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="#" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+
+                      <span>Faq</span>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+
+                    <ul class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Faq 1
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Faq 2
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Faq 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <!--SUB MENU PRINCING TABLE-->
+                  <li class="h-[43.9946px] relative">
+                    
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Pricing Table
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+
+                    </a>
+
+                    <ul class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Pricing Table 1
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Pricing Table 2
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Pricing Table 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <!--SUB MENU TEAM-->
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Team
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+
+                    <ul class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Team 1
+                        </a>
+
+                      </li>
+
+                      <li>
+                        
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Team 2
+                        </a>
+
+                      </li>
+
+                      <li>
+                        
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Team 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Coming Soon
+                    </a>
+
+                  </li>
+
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Error 404
+                    </a>
+
+                  </li>
+
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Site Down
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <!--MENU SERVICES-->
+              <li class="h-[90.2446px] w-[92.269px] relative group">
+
+                <a href="" class="inline-block h-[90.2446px] w-[92.269px] py-[35px] px-[12px] relative text-[15px] font-medium">
+
+                  <span class="h-[20.2446px] w-[57.4px] inline-block">
+                    Services
+                  </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+
+                <ul class="mt-[20px] h-[97.9891px] shadow-2xl bg-white py-[5px] absolute visible w-[220px] z-[10] transition-opacity opacity-0 group-hover:opacity-100">
+
+                  <!--SUB MENU SERVICES-->                  
+                  <li class="h-[43.9946px] relative">
+                    
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Services
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+
+                    <ul class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Services 1
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Services 2                          
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Services 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <!--SUB MENU SERVICES DETAILS-->
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Services Details
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="block mt-[4px] h-[16.0054px] w-[8.00272px]"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+
+                    <ul class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+                        
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Services Details 1
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Services Details 2
+                        </a>
+
+                      </li>
+
+                      <li>
+
+                        <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Services Details 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <!--MENU POST LAYOUT-->
+              <li class="h-[90.2446px] w-[114.54px] relative group">
+
+                <a href="" class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[75.163px] text-[15px] font-medium">
+
+                  <span class="h-[20.2446px] w-[79.67px] inline-block">
+                    Post Layout
+                  </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+
+                <!--SUB MENU POST LAYOUT-->
+                <ul class="h-[537.935px] mt-[20px] bg-white shadow-2xl py-[5px] absolute visible w-[220px] z-[10] transition-opacity opacity-0 group-hover:opacity-100">
+
+                  <li>
+
+                    <a href="post-standard.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Standard
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-left-sidebar.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Left Sidebar
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-header-image.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Header Image
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-slide-show.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Slide Show
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-side-image.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Side Image
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-gallery.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Gallery
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-gallery-alternative.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Gallery Alt
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-link.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Link
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-audio.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Audio
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-video.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Video
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-pagination.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post With Pagination
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="post-open-gutenberg.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Post Open Gutenberg
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <!--MENU BLOG-->
+              <li class="h-[90.2446px] w-[65.2038px] relative group">
+
+                <a href="" class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[75.163px] text-[15px] font-medium">
+
+                  <span class="h-[20.2446px] w-[30.34px] inline-block">
+                    Blog
+                  </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                </a>
+
+                <!--SUB MENU BLOG-->
+                <ul class="h-[185.978px] mt-[20px] bg-white shadow-2xl py-[5px] absolute visible w-[220px] z-[10]transition-opacity opacity-0 group-hover:opacity-100">
+                  <li>
+
+                    <a href="blog-grid-2.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Blog Grid 2
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="blog-large-left-sidebar.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Large Left Sidebar
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="blog-large-right-sidebar.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Large Right Sidebar
+                    </a>
+
+                  </li>
+
+                  <!--MENU BLOG DETAILS-->
+                  <li class="h-[43.9946px] relative">
+
+                    <a href="" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Blog Details
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="block mt-[4px] h-[16.0054px] w-[7.88403px]"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+
+                    <!--SUB MENU BLOG DETAILS-->
+                    <ul class="left-[-220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute">
+
+                      <li>
+                          
+                        <a href="blog-details-3.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Blog Details 1
+                        </a>
+
+                      </li>
+
+                      <li>
+                        
+                        <a href="blog-details-3.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Blog Details 2
+                        </a>
+
+                      </li>
+
+                      <li>
+                        
+                        <a href="blog-details-3.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                          Blog Details 3
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <!--MENU CONTACT-->
+              <li class="h-[90.2446px] w-[108.74px] relative group"> 
+
+                <a href="" class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[75.163px] text-[15px] font-medium">
+
+                  <span class="inline-block h-[20.2446px] w-[73.87px]">
+                    Contact Us
+                  </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+
+                <!--Sub menu CONTACT-->
+                <ul class="h-[141.984px] mt-[20px] py-[5px] absolute visible w-[220px] z-[10] left-[-111.264px] transition-opacity opacity-0 group-hover:opacity-100">
+
+                  <li>
+                      
+                    <a href="contact-us-3.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Contact Us 1
+                    </a>
+
+                  </li>
+
+                  <li>
+                    
+                    <a href="contact-us-3.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Contact Us 2 
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="contact-us-3.html" class="h-[43.9946px] block py-[10px] px-[25px] relative">
+                      Contact Us 3 
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+            </ul>              
+
+            <!--Icone hamburguer + botão get a quote-->
+            <div class="flex">
+
+              <!--Botão get a quote -->
+              <div class="items-center flex float-right h-[90px] ml-[20px] relative z-[9] w-[155px]">
+
+                <div class="h-[42.5272px] w-[155px]">
+
+                  <a href=" " class="bg-indigo-500 hover:bg-blue-700 transition duration-300 ease-in-out text-white rounded h-[16.788px] inline-block h-[42.5272px] py-[12px] px-[25px] w-[155px] font-medium text-[14px] text-center leading-4 uppercase align-middle border-x-[1px] border-y-[1px]">
+                    Get A Quote
+                    
                     <svg
                       class="inline-block h-[13.9946px] ml-[10px] relative -top-px w-[7.01087px] font-black"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
+                      fill="currentColor">
                       <path
                         fill-rule="evenodd"
                         d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                         clip-rule="evenodd"
                       />
-                    </svg>
-                  </a>
-                </div>
-              </div>
+                    </svg> 
 
-              <div
-                class="items-center flex basis-auto grow justify-end h-[90.2446px] bg-gray-200"
-              >
-                <div class="hidden float-left h-[90px] w-[130px] z-[9]">
-                  <a href="" class="table-cel">
-                    <img
-                      src="imagens/logo.png"
-                      alt=""
-                      class="inline h-auto w-full max-w-full"
-                    />
                   </a>
+
                 </div>
 
-                <ul
-                  class="flex justify-end items-center justify-between w-[532.704px] h-[90.245px] relative flex-row flex-wrap bg-gray-300"
-                >
-                  <!--UL DE TODAS-->
-
-                  <li
-                    class="h-[90.2446px] w-[75.163px] relative list-item group"
-                  >
-                    <!--parei aqui 02.02.2024-->
-
-                    <a
-                      href=""
-                      class="w-[75.163px] h-[90.2446px] py-[35px] px-[12px] relative inline-block font-medium"
-                      ><!---->
-
-                      <span
-                        class="h-[20.24px] w-[40.29px] inline-block text-[15px]"
-                        >Home</span
-                      ><!---->
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-
-                    <ul
-                      class="h-[141.984px] bg-pink-400 py-[5px] mt-[20px] absolute visible w-[220px] z-[10] transition-opacity opacity-0 group-hover:opacity-100"
-                    >
-                      <!--sub-menu-->
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Home 1
-                        </a>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Home 2
-                        </a>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Home 3
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="h-[90.2446px] relative w-[76.7935px]">
-                    <a
-                      href=""
-                      class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[76.7935px] text-[15px] font-medium"
-                    >
-                      <span class="h-[20.2446px] w-[41.93px] inline-block"
-                        >Pages</span
-                      >
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-
-                    <ul
-                      class="h-[317.962px] bg-pink-800 py-[5px] absolute block w-[220px] z-[10] mt-[20px]"
-                      id="esconder"
-                    >
-                      <!--sub-menu-->
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          About Us
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </a>
-
-                        <ul
-                          class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              About Us 1
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              About Us 2
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              About Us 3
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href="#"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          <span>Faq</span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </a>
-
-                        <ul
-                          class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Faq 1
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Faq 2</a
-                            >
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Faq 3</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Pricing Table
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-[8.00272px] h-[16.0054px] mt-[4px] visible"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </a>
-
-                        <ul
-                          class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Pricing Table 1</a
-                            >
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Pricing Table 2
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Pricing Table 3
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Team
-                          <i> </i>
-                        </a>
-
-                        <ul
-                          class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Team 1
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Team 2
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Team 3
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                          >Coming Soon</a
-                        >
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                          >Error 404</a
-                        >
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                          >Site Down</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="h-[90.2446px] w-[92.269px] relative">
-                    <a
-                      href=""
-                      class="inline-block h-[90.2446px] w-[92.269px] py-[35px] px-[12px] relative text-[15px] font-medium"
-                    >
-                      <span class="h-[20.2446px] w-[57.4px] inline-block">
-                        Services
-                      </span>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-
-                    <ul
-                      class="mt-[20px] h-[97.9891px] bg-pink-300 py-[5px] absolute visible w-[220px] z-[10]"
-                      id="esconder"
-                    >
-                      <!--sub-menu-->
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Services
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </a>
-
-                        <ul
-                          class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Services 1</a
-                            >
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Services 2</a
-                            >
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                              >Services 3</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Services Details
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="block mt-[4px] h-[16.0054px] w-[8.00272px]"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </a>
-
-                        <ul
-                          class="left-[220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              Services Details 1
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              Services Details 2
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href=""
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              Services Details 3
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="h-[90.2446px] w-[114.54px] relative">
-                    <a
-                      href=""
-                      class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[75.163px] text-[15px] font-medium"
-                    >
-                      <span class="h-[20.2446px] w-[79.67px] inline-block">
-                        Post Layout
-                      </span>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-
-                    <ul
-                      class="h-[537.935px] mt-[20px] bg-green-400 py-[5px] absolute visible w-[220px] z-[10]"
-                      id="esconder"
-                    >
-                      <li>
-                        <a
-                          href="post-standard.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Standard
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-left-sidebar.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Left Sidebar
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-header-image.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Header Image
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-slide-show.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Slide Show
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-side-image.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Side Image
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-gallery.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Gallery
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-gallery-alternative.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Gallery Alt
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-link.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Link
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-audio.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Audio
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-video.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Video
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-pagination.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post With Pagination
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="post-open-gutenberg.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Post Open Gutenberg
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="h-[90.2446px] w-[65.2038px] relative">
-                    <a
-                      href=""
-                      class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[75.163px] text-[15px] font-medium"
-                    >
-                      <span class="h-[20.2446px] w-[30.34px] inline-block">
-                        Blog
-                      </span>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-
-                    <ul
-                      class="h-[185.978px] mt-[20px] bg-blue-400 py-[5px] absolute visible w-[220px] z-[10]"
-                      id="esconder"
-                    >
-                      <li>
-                        <a
-                          href="blog-grid-2.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Blog Grid 2
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="blog-large-left-sidebar.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Large Left Sidebar
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="blog-large-right-sidebar.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Large Right Sidebar
-                        </a>
-                      </li>
-
-                      <li class="h-[43.9946px] relative">
-                        <a
-                          href=""
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Blog Details
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="block mt-[4px] h-[16.0054px] w-[7.88403px]"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </a>
-
-                        <ul
-                          class="left-[-220px] mt-[20px] py-[5px] z-[10] invisible w-[220px] absolute"
-                        >
-                          <li>
-                            <a
-                              href="blog-details-1.html"
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              Blog Details 1
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href="blog-details-2.html"
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              Blog Details 2
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href="blog-details-3.html"
-                              class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                            >
-                              Blog Details 3
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="h-[90.2446px] w-[108.74px] relative">
-                    <a
-                      href=""
-                      class="inline-block h-[90.2446px] py-[35px] px-[12px] relative h-[75.163px] text-[15px] font-medium"
-                    >
-                      <span class="inline-block h-[20.2446px] w-[73.87px]">
-                        Contact Us
-                      </span>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="inline-block ml-[3px] mt-[-3px] h-[8.99457px] w-[7.88403px]"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-
-                    <ul
-                      class="h-[141.984px] mt-[20px] py-[5px] absolute visible w-[220px] z-[10] left-[-111.264px]"
-                      id="esconder"
-                    >
-                      <li>
-                        <a
-                          href="contact-us-1.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Contact Us 1
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="contact-us-2.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Contact Us 2
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="contact-us-3.html"
-                          class="h-[43.9946px] block py-[10px] px-[25px] relative"
-                        >
-                          Contact Us 3
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
               </div>
-            </div>
+
+              <!-- Icone hamburguer -->
+              <div class="lg:hidden">
+
+                <button class="float-right h-[18px] justify-end my-[36px] ml-[15px] relative w-[20px]" >
+                  <span class="bg-slate-500 block absolute h-[2px] top-0 w-full"></span>
+                  <span class="bg-slate-500 block h-[2px] absolute top-[7px] w-full"></span>
+                  <span class="bg-slate-500 block h-[2px] absolute top-[14px] w-full"></span>
+                </button>
+
+              </div>
+
+            </div>            
+
+            <!--<div class="items-center flex basis-auto grow justify-end h-[90.2446px]">
+
+              <div class="hidden float-left h-[90px] w-[130px] z-[9]">
+
+                <a href="" class="table-cel">
+
+                  <img src="imagens/logo.png" alt="" class="inline h-auto w-full max-w-full"/>
+
+                </a>
+
+              </div>
+              
+            </div>-->
+
           </div>
+
         </div>
+
       </header>
+
     </div>
 
     <!-- FIM DO HEADER -->
 
     <div class="bg-blue-400">
-      <div class="bg-[url('/imagens/pic2')] bg-red-400"></div>
+      <div class="bg-[url('/imagens/pic2')] bg-red-400">
+
+      </div>
     </div>
 
     <!--ARQUIVOS JAVASCRIPT-->
