@@ -1,14 +1,34 @@
-//acontece quando a pagina é carregada e depois some
-document.addEventListener("DOMContentLoaded", function () {
+//acontece quando a pagina é carregada
+document.addEventListener("DOMContentLoaded", function(){
     // Esconder o loader e mostrar o conteúdo
     document.getElementById("loader-wrapper").style.display = "block";
 
-    setTimeout(function () {
+    setTimeout(function(){
         document.getElementById("loader-wrapper").style.display = "none";
         document.getElementById("page-wrapper").style.display = "block";
     }, 750);     
 });
 
+//acontece quando o usuario rola a tela 
+window.addEventListener('scroll', function(){
+    let header = document.querySelector('#header');
+    if (window.scrollY > 0) {
+        header.classList.add('bg-white');
+        header.classList.add('shadow-lg');       
+    } else {
+        header.classList.remove('bg-white');
+        header.classList.remove('shadow-lg'); 
+    }
+})
+
+
+function openNav() {
+    document.querySelector("#myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.querySelector("#myNav").style.width = "0";
+  }
 
 
 

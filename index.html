@@ -14,6 +14,67 @@
         min-width: 0;
         box-sizing: border-box;
       }
+
+      * Navbar styles */
+.navbar {
+  background-color: #333;
+  padding: 15px;
+}
+
+.open-btn {
+  color: white;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+/* Overlay (modal) styles */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
     </style>
   </head>
 
@@ -26,7 +87,7 @@
     <div id="page-wrapper" class="">
 
       <!--Header-->
-      <header class="h-[90.2446px] fixed z-[9999] w-full">
+      <header id="header" class="h-[90.2446px] fixed top-0 left-0 z-[9999] w-full transition duration-500">
 
         <!-- Main Header -->
         <div class="container mx-auto px-4">
@@ -51,7 +112,7 @@
                   </span>
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                    class="inline-block h-3 w-3">
+                    class="inline-block h-3 w-3"> 
                       <path fill-rule="evenodd"
                         d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
                   </svg>
@@ -760,7 +821,7 @@
 
               </li>
 
-            </ul>              
+            </ul>
 
             <!--Icone hamburguer + botão get a quote-->
             <div class="flex">
@@ -790,7 +851,7 @@
               <!-- Icone hamburguer -->
               <div class="lg:hidden">
 
-                <button class="float-right h-[18px] justify-end my-[36px] ml-[15px] relative w-[20px]" >
+                <button id="open-btn" class="float-right h-[18px] justify-end my-[36px] ml-[15px] relative w-[20px] " onclick="openNav()">
                   <span class="bg-slate-500 block absolute h-[2px] top-0 w-full"></span>
                   <span class="bg-slate-500 block h-[2px] absolute top-[7px] w-full"></span>
                   <span class="bg-slate-500 block h-[2px] absolute top-[14px] w-full"></span>
@@ -798,21 +859,24 @@
 
               </div>
 
-            </div>            
-
-            <!--<div class="items-center flex basis-auto grow justify-end h-[90.2446px]">
-
-              <div class="hidden float-left h-[90px] w-[130px] z-[9]">
-
-                <a href="" class="table-cel">
-
-                  <img src="imagens/logo.png" alt="" class="inline h-auto w-full max-w-full"/>
-
-                </a>
-
+            </div> 
+            
+            <!--Janela modal -->            
+          <!--             
+            <div class="navbar">
+              <button class="open-btn" onclick="openNav()">☰ Open Navbar</button>
+            </div>
+            
+            <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+              <div class="overlay-content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
               </div>
-              
-            </div>-->
+            </div>
+          -->
 
           </div>
 
@@ -820,19 +884,36 @@
 
       </header>
 
-      <div>
-        <h1>aqui</h1>
-      </div>
-
     </div>
 
     <!-- FIM DO HEADER -->
 
-    <!-- <div class="bg-blue-400">
-      <div class="bg-[url('/imagens/main-slider/slider1/pic2')] bg-center bg-no-repeat bg-red-400">
-        <h1>testando</h1>
+    <div class="h-screen ">
+      <!--slider-->
+      <div class="bg-[url('/imagens/main-slider/slider1/pic2')] bg-center bg-no-repeat bg-cover flex items-center bg-white h-full relative">
+        <div class="container">
+          <div>
+            <div>
+
+            </div>
+            <div>
+              
+            </div>
+            <div>
+              <div>
+
+              </div>
+              <div>
+
+              </div>
+              <h6>
+
+              </h6>
+            </div>
+          </div>
+          
       </div>
-    </div> -->
+    </div>
 
     <!--ARQUIVOS JAVASCRIPT-->
     <script src="Javascript/arquivo01.js"></script>
