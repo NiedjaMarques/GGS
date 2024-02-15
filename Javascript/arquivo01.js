@@ -24,6 +24,7 @@ window.addEventListener('scroll', function(){
 
 function openNav() {
     document.querySelector("#myNav").style.width = "100%";
+    // document.querySelector("#open-btn").style.display = "none";
   }
   
   function closeNav() {
