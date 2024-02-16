@@ -1,60 +1,34 @@
-//acontece quando a pagina é carregada
+//Acontece quando a pagina é carregada
 document.addEventListener("DOMContentLoaded", function(){
-    // Esconder o loader e mostrar o conteúdo
-    document.getElementById("loader-wrapper").style.display = "block";
+    // Esconder o carregamento e mostrar o conteúdo
+    const carregamentoPagina = document.getElementById("carregamentoPagina");
+    const conteudoPagina = document.getElementById("conteudoPagina");
 
+    carregamentoPagina.style.display = "block";
+    
     setTimeout(function(){
-        document.getElementById("loader-wrapper").style.display = "none";
-        document.getElementById("page-wrapper").style.display = "block";
-    }, 750);     
+        carregamentoPagina.style.display = "none";
+        conteudoPagina.style.display = "block";
+    }, 450);
 });
 
-//acontece quando o usuario rola a tela 
+//Acontece quando o usuário rola a tela 
 window.addEventListener('scroll', function(){
-    let header = document.querySelector('#header');
+    const header = document.querySelector('#header');
     if (window.scrollY > 0) {
-        header.classList.add('bg-white');
-        header.classList.add('shadow-lg');       
+        addClass(header, ['bg-white', 'shadow-lg']); // Adiciona classes usando função
     } else {
-        header.classList.remove('bg-white');
-        header.classList.remove('shadow-lg'); 
+        removeClass(header, ['bg-white', 'shadow-lg']); // Remove classes usando função
     }
-})
+});
 
-
+// Abre o menu de navegação
 function openNav() {
     document.querySelector("#myNav").style.width = "100%";
     // document.querySelector("#open-btn").style.display = "none";
-  }
-  
-  function closeNav() {
+}
+
+// Fecha o menu de navegação
+function closeNav() {
     document.querySelector("#myNav").style.width = "0";
-  }
-
-
-
-
-
-
-// //COMANDO DE INTERAÇÃO COM MEU MENU
-// let header = document.getElementById('header');
-// let navigationHeader = document.getElementById('navegation_header');
-// let content = document.getElementById('content');
-// let showSidebar = false; //interruptor
-
-// function alternarBarraLateral(){
-//     showSidebar = !showSidebar;
-//     if (showSidebar) {
-//         navigationHeader.classList.remove('translate-x-[-100vw]');
-//         navigationHeader.classList.add('translate-x[-10vw]');
-
-
-//     }else{
-//         navigationHeader.classList.remove('translate-x[-10vw]');
-//         navigationHeader.classList.add('translate-x-[-100vw]');
-//     }
-// }
-
-
-//quando passo o mouse em cima da ul principal, minha lista de opções apareça
-//pensar na vertical e horizontal
+}
