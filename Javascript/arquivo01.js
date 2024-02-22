@@ -29,15 +29,12 @@ function closeNav() {
     var menu = document.getElementById("showNave");
     var openIcon = document.getElementById("open-menu");
     var closeIcon = document.getElementById("close-menu");
-    let myNav = document.getElementById("myNav");
+    var myNav = document.getElementById("myNav");
 
     menu.style.width = "0";
 
-    myNav.style.width = "0";
-
-    
-    
-    myNav.style.transition = "all 0.5s";
+    myNav.style.width = "0";    
+    myNav.style.transition = "all 1s";
 
     openIcon.style.display = "block";
     closeIcon.style.display = "none";
@@ -48,13 +45,13 @@ function openNav() {
     var menu = document.getElementById("showNave");
     var openIcon = document.getElementById("open-menu");
     var closeIcon = document.getElementById("close-menu");
-     let myNav = document.getElementById("myNav");   
+    var myNav = document.getElementById("myNav");   
 
     menu.style.width = "100%";
 
     setTimeout(function (){
       myNav.style.width = "280px";
-      myNav.style.transition = "all 0.5s";
+      myNav.style.transition = "all 1s";
 
       //menu.classList.add('width-100');
     }, 1500);
