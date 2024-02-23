@@ -827,7 +827,7 @@
             </div> 
 
             <!--Janela modal -->
-            <div id="showNave" class="h-full w-0 fixed top-0 left-0 bg-black opacity-60">             
+            <div id="showNave" class="overflow-x-scroll md:overflow-x-hidden h-full w-0 fixed z-20 top-0 left-0 bg-black opacity-60">             
                 
               <!-- Ícone fechar -->
               <a id="close-menu" href="javascript:void(0)" class="hidden text-white absolute top-2.5 right-2.5 text-4xl" onclick="closeNav()">
@@ -838,8 +838,9 @@
 
             </div>    
             
-            <div id="myNav" class="w-0 h-full fixed bg-white top-0 left-0 overflow-y-auto block flex-wrap">
+            <div id="myNav" class="transition-all ease duration-700 delay-0 -left-px h-full w-[280px] z-30 fixed bg-white top-0 left-0 overflow-y-scroll block"> <!---->
 
+              <!--foto janela modal-->
               <div class="px-6 py-5 ">
 
                 <a href="">
@@ -850,30 +851,109 @@
 
               </div>
 
-              <ul class="relative w-full px-5">
+              <!--navegação (ul) janela modal-->
+              <ul class="group relative w-full px-5">
 
-                <li class="font-medium hover:text-indigo-500 ease-in duration-500 w-full border-b">
+                <!--Home-->
+                <li onclick="openOptions(home)" class="font-medium w-full border-b">
 
-                  <a href="#" class="flex justify-between items-center py-2 text-nowrap">
+                  <a href="#" class="hover:text-indigo-500 flex justify-between items-center py-2 text-nowrap">
                     Home
               
-                    <div class="h-7 w-7 bg-indigo-600 text-white items-center justify-center flex">
+                    <div class="h-7 w-7 bg-indigo-600 text-white items-center justify-center flex stroke-current ">
 
-                      <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                      <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke-width="4" />
                       </svg>
 
                     </div> 
 
                   </a>
 
+                  <ul id="sub-menu-home" class="group/submenu bg-white py-2.5 hidden border-t">
+
+                    <li class="flex items-center">
+
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="h-3 w-3 stroke-current"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd"
+                            stroke-width="2" 
+                          />
+                        </svg>
+                      </div> 
+
+                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                        Home 1
+
+                      </a>
+                    </li>
+
+                    <li class="flex items-center">
+
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="h-3 w-3 stroke-current"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd"
+                            stroke-width="2" 
+                          />
+                        </svg>
+                      </div> 
+
+                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                        Home 2
+
+                      </a>
+                    </li>
+
+                    <li class="flex items-center">
+                      
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="h-3 w-3 stroke-current"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd"
+                            stroke-width="2" 
+                          />
+                        </svg>
+                      </div> 
+
+                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">Home 3             
+
+                      </a> <!--block pt-[2px] pb-[1px] pl-[15px] -->
+
+                    </li>
+
+                  </ul>
+
                 </li>
 
-                <li class="font-medium hover:text-indigo-500 ease-in duration-500 w-full border-b">
+                <!--Pages-->
+                <li onclick="openOptions(pages)" class="font-medium w-full border-b">
 
                   <a href="#" class="flex justify-between items-center py-2 text-nowrap">
                     Pages
 
-                    <div class="h-7 w-7 bg-indigo-600 text-white items-center justify-center flex">
+                    <div class="h-7 w-7 bg-indigo-600 text-black items-center justify-center flex">
 
                       <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
                       </svg>
@@ -882,9 +962,16 @@
 
                   </a>
 
+                  <ul id="sub-menu-pages" class="group/submenu hidden" id="sub-menu-pages">
+                    <li>Pages Item 1</li>
+                    <li>Pages Item 2</li>
+                    <li>Pages Item 3</li>
+                  </ul>
+
                 </li>
 
-                <li class="font-medium hover:text-indigo-500 ease-in duration-500 w-full border-b">
+                <!--Services-->
+                <li onclick="openOptions()" class="font-medium w-full border-b">
 
                   <a href="#" class="flex justify-between items-center py-2 text-nowrap">
                     Services
@@ -900,7 +987,8 @@
 
                 </li>
 
-                <li class="font-medium hover:text-indigo-500 ease-in duration-500 w-full border-b">
+                <!--Post Layout-->
+                <li onclick="openOptions()" class="font-medium w-full border-b">
 
                   <a href="#" class="flex justify-between items-center py-2 text-nowrap">
                     Post Layout
@@ -916,7 +1004,8 @@
 
                 </li>
 
-                <li class="font-medium hover:text-indigo-500 ease-in duration-500 w-full border-b">
+                <!--Blog-->
+                <li onclick="openOptions()" class="font-medium w-full border-b">
 
                   <a href="#" class="flex justify-between items-center py-2 text-nowrap">
                     Blog
@@ -932,7 +1021,8 @@
 
                 </li>
 
-                <li class="font-medium hover:text-indigo-500 ease-in duration-500 w-full border-b">
+                <!--Contact Us-->
+                <li onclick="openOptions()" class="font-medium w-full border-b">
 
                   <a href="#" class="flex justify-between items-center py-2 text-nowrap">
                     Contact Us

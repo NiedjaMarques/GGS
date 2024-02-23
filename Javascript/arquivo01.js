@@ -25,41 +25,79 @@ document.addEventListener("scroll", function () {
 });
 
 //Fecha o menu de navegação
-function closeNav() {    
-    var menu = document.getElementById("showNave");
-    var openIcon = document.getElementById("open-menu");
-    var closeIcon = document.getElementById("close-menu");
-    var myNav = document.getElementById("myNav");
+function closeNav() {
+  var menu = document.getElementById("showNave");
+  var openIcon = document.getElementById("open-menu");
+  var closeIcon = document.getElementById("close-menu");
+  var myNav = document.getElementById("myNav");
 
-    menu.style.width = "0";
+  menu.style.width = "0";
 
-    myNav.style.width = "0";    
-    myNav.style.transition = "all 1s";
+  myNav.style.width = "0";
+  myNav.style.transition = "all 1s";
 
-    openIcon.style.display = "block";
-    closeIcon.style.display = "none";
+  openIcon.style.display = "block";
+  closeIcon.style.display = "none";
 }
 
 //Abre o menu de navegação
 function openNav() {
-    var menu = document.getElementById("showNave");
-    var openIcon = document.getElementById("open-menu");
-    var closeIcon = document.getElementById("close-menu");
-    var myNav = document.getElementById("myNav");   
+  var menu = document.getElementById("showNave");
+  var openIcon = document.getElementById("open-menu");
+  var closeIcon = document.getElementById("close-menu");
+  var myNav = document.getElementById("myNav");
 
-    menu.style.width = "100%";
+  menu.style.width = "100%";
 
-    setTimeout(function (){
-      myNav.style.width = "280px";
-      myNav.style.transition = "all 1s";
+  setTimeout(function () {
+    myNav.style.width = "280px";
+  }, 1500);
 
-      //menu.classList.add('width-100');
-    }, 1500);
-
-    
-        
-    
-    openIcon.style.display = "none";    
-    closeIcon.style.opacity = "1";
-    closeIcon.style.display = "block";
+  openIcon.style.display = "none";
+  closeIcon.style.opacity = "1";
+  closeIcon.style.display = "block";
 }
+
+// function openOptions(menu) {
+//   //array.forEach(funcao([valorAtual, índice, array]), argumentoThis)
+//   let subMenu;
+
+//   let allSubMenus = document.querySelectorAll("group/submenu");
+//   allSubMenus.forEach(submenu => {
+//     submenu.classList.add('hidden');
+//   });
+
+//   switch (menu) {
+//     case 'home':
+//       subMenu = document.getElementById('sub-menu-home');      
+//       break;
+
+//     case 'pages':
+//       subMenu = document.getElementById('sub-menu-pages');
+//       break;
+  
+//     default:
+//       subMenu = null;
+//       break;
+//   }
+
+//   if (subMenu) {
+//     subMenu.classList.remove('hidden');    
+//   }
+
+
+
+
+
+
+
+
+//   // let subMenu = document.getElementById("sub-menu");
+
+//   // if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+//   //   subMenu.style.display = "block";
+//   // } else {
+//   //   subMenu.style.display = "none";
+//   // }
+// }
+
