@@ -58,46 +58,14 @@ function openNav() {
   closeIcon.style.display = "block";
 }
 
-// function openOptions(menu) {
-//   //array.forEach(funcao([valorAtual, índice, array]), argumentoThis)
-//   let subMenu;
+//Abrindo opções do submenu - PARAMETRO DINAMICO
+function openOptions(id){
+  let submenu = document.getElementById(id);
 
-//   let allSubMenus = document.querySelectorAll("group/submenu");
-//   allSubMenus.forEach(submenu => {
-//     submenu.classList.add('hidden');
-//   });
-
-//   switch (menu) {
-//     case 'home':
-//       subMenu = document.getElementById('sub-menu-home');      
-//       break;
-
-//     case 'pages':
-//       subMenu = document.getElementById('sub-menu-pages');
-//       break;
+  if (submenu.style.display === 'none'){
+    submenu.style.display = "block";
+  }else{
+    submenu.style.display = "none";
+  } 
   
-//     default:
-//       subMenu = null;
-//       break;
-//   }
-
-//   if (subMenu) {
-//     subMenu.classList.remove('hidden');    
-//   }
-
-
-
-
-
-
-
-
-//   // let subMenu = document.getElementById("sub-menu");
-
-//   // if (subMenu.style.display === 'none' || subMenu.style.display === '') {
-//   //   subMenu.style.display = "block";
-//   // } else {
-//   //   subMenu.style.display = "none";
-//   // }
-// }
-
+}
