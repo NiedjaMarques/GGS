@@ -826,7 +826,7 @@
 
             </div> 
 
-            <!--Janela modal -->
+            <!--Janela modal - div escura janela modal -->
             <div id="showNave" class="overflow-x-scroll md:overflow-x-hidden h-full w-0 fixed z-20 top-0 left-0 bg-black opacity-60">             
                 
               <!-- Ícone fechar -->
@@ -838,7 +838,6 @@
 
             </div>    
             
-            <!--div escura janela modal-->
             <div id="myNav" class="transition-all ease duration-700 delay-0 -left-px h-full w-[280px] z-30 fixed bg-white top-0 left-0 overflow-y-scroll block"> <!---->
 
               <!--foto janela modal-->
@@ -873,7 +872,7 @@
                   <!---Sub menu home-->
                   <ul id="sub-menu-home" class="submenu bg-white py-2.5 hidden border-t">
 
-                    <li class="flex items-center">
+                    <li class="font-medium w-full border-b">
 
                       <div>
                         <svg
@@ -965,10 +964,13 @@
                   </a>
 
                   <!--Sub menu pages-->
-                  <ul id="sub-menu-pages" class="submenu bg-white py-2.5 hidden border-t">
+                  <ul id="sub-menu-pages" class="bg-white py-2.5 hidden border-t"> 
 
-                    <li class="flex items-center">
-                      <div>
+                    <li onclick="openOptions('sub-about-us')">                                           
+
+                      <!--sub menu about us-->
+                      <div class="flex items-center">
+                        
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -979,21 +981,50 @@
                             fill-rule="evenodd"
                             d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                             clip-rule="evenodd"
-                            stroke-width="2" 
+                            stroke-width="2"
                           />
                         </svg>
-                      </div> 
+                        
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
-                        About Us
-                      </a>
+                        <a href="" class="flex items-center justify-between hover:text-indigo-500 pl-1.5  pt-0.5 pb-px block w-full">
+                        
+                          About Us
+                          <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
+                            <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                            </svg>
+                          </div>
+                        </a>
 
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
+                      </div>  
+                      
+                      <!--ul sub menu about us-->
+                      <ul id="sub-about-us" class="list-disc list-inside pl-5 py-2.5 hidden">
 
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
+                        <li class="pl-3.5 pt-0.5 pb-px"> 
+
+                          <a href="" class="hover:text-indigo-500">
+                            About Us 1
+                          </a>
+
+                        </li>
+
+                        <li class="pl-3.5 pt-0.5 pb-px">
+
+                          <a href="" class="hover:text-indigo-500">
+                            About Us 2
+                          </a>
+
+                        </li>
+
+                        <li class="pl-3.5 pt-0.5 pb-px">
+
+                          <a href="" class="hover:text-indigo-500">
+                            About Us 3
+                          </a>
+
+                        </li>
+                      </ul> 
+
                     </li>
 
                     <li class="flex items-center">
@@ -1013,16 +1044,17 @@
                         </svg>
                       </div> 
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                      <a href="" class=" flex items-center justify-between hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
                         Faq
+
+                        <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
+
+                          <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                          </svg>
+    
+                        </div>
                       </a>
 
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
-
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
                     </li>
 
                     <li class="flex items-center">
@@ -1042,16 +1074,17 @@
                         </svg>
                       </div> 
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                      <a href="" class="flex items-center justify-between hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
                         Princing Table
+
+                        <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
+
+                          <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                          </svg>
+    
+                        </div>
                       </a>
 
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
-
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
                     </li>
 
                     <li class="flex items-center">
@@ -1071,16 +1104,17 @@
                         </svg>
                       </div> 
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                      <a href="" class="flex items-center justify-between hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
                         Team
+
+                        <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
+
+                          <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                          </svg>
+    
+                        </div>
                       </a>
-
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current">
-
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
+                      
                     </li>
 
                     <li class="flex items-center">
@@ -1189,16 +1223,19 @@
                         </svg>
                       </div> 
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                      <a href="" class="flex items-center justify-between hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+
                         Sevices
+
+                        <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current ">
+
+                          <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                          </svg>
+    
+                        </div>
                       </a>
 
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current ">
-
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
+                      
                     </li>
 
                     <li class="flex items-center">
@@ -1219,16 +1256,17 @@
                         </svg>
                       </div> 
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                      <a href="" class="flex items-center justify-between hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
                         Services Details
-                      </a>
 
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current ">
+                        <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current ">
 
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
+                          <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                          </svg>
+    
+                        </div>
+
+                      </a>                     
 
                     </li>
 
@@ -1672,16 +1710,17 @@
                         </svg>
                       </div> 
 
-                      <a href="" class="hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
+                      <a href="" class="flex items-center justify-between hover:text-indigo-500 pt-0.5 pb-px pl-1.5 block w-full">
                         Blog Details
+
+                        <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current ">
+
+                          <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
+                          </svg>
+    
+                        </div>
                       </a>
 
-                      <div class="h-7 w-7 bg-slate-400 text-white items-center justify-center flex stroke-current ">
-
-                        <svg class="h-4 w-4"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" stroke="white" stroke-width="4" />
-                        </svg>
-  
-                      </div>
                     </li>
 
                   </ul>
