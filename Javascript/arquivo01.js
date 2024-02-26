@@ -51,7 +51,7 @@ function openNav() {
 
   setTimeout(function () {
     myNav.style.width = "280px";
-  }, 1500);
+  }, 500);
 
   openIcon.style.display = "none";
   closeIcon.style.opacity = "1";
@@ -62,7 +62,7 @@ function openNav() {
 function openOptions(id){
   let submenu = document.getElementById(id);
 
-  if (submenu.style.display === 'none'){
+  if (submenu.style.display === 'none' || submenu.style.display === ''){
     submenu.style.display = "block";
   }else{
     submenu.style.display = "none";
