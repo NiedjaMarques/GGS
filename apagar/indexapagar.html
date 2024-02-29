@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      .carrossel {
+        box-shadow: 2px 2px 4px rgb(176, 175, 175);
+        overflow: hidden;
+        height: 100px;
+        width: 100%;
+      }
+
+      .container {
+        display: flex;
+        transition: transform 0.5s ease;
+        transform: translateX(0);
+      }
+
+      img {
+        background-color: rgb(153, 224, 227);
+        object-fit: cover;
+        height: 100px;
+        width: 200px;
+      }
+
+      .hover{
+        display: "";
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="carrossel">
+
+      <div class="container" id="img">
+
+        
+            <img style="background-color: brown;" src="../imagens/logo/logo-purple1.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple4.png" alt="logo 2"/> 
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>       
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+
+            <img src="../imagens/logo/logo-purple1.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple4.png" alt="logo 2"/> 
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>       
+            <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
+            <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+
+            
+        
+      </div>
+
+    </div>
+
+    <script>
+      const imgs = document.getElementById("img");
+      const img = document.querySelectorAll("#img img");
+
+      let idx = 0;
+
+      setInterval(carrossel, 1800);
+
+      function carrossel(){
+            idx++;
+
+            if (idx >= img.length) {
+                idx = 0;
+            }
+
+            // Calcula a posição de translação
+            const translateValue = -idx * img[0].clientWidth;
+
+            imgs.style.transform = `translateX(${translateValue}px)`;
+
+            if (idx === img.length / 2) {
+            setTimeout(() => {
+                imgs.style.transition = "none"; // Remove a transição
+                idx = 0;
+                imgs.style.transform = `translateX(0)`;
+                setTimeout(() => {
+                    imgs.style.transition = "transform 0.8s ease"; // Restaura a transição
+                }, 50); // Pequeno atraso para garantir que a transição seja aplicada corretamente
+            }, 800); // Espera 0.8s para que a última imagem seja exibida completamente antes de reiniciar
+        }
+        }
+        
+    </script>
+  </body>
+</html>
