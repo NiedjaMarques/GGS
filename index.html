@@ -6,6 +6,12 @@
     <title>Samar - HTML Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <style>
       * {
         outline: none;
@@ -2474,27 +2480,51 @@
     </div>
 
     <!--AREA DOS SERVIÇOS QUE OFERECEMOS VER COM DEYVISSON-->
-    <section class="bg-center bg-cover bg-no-repeat bg-[url('/imagens/background/bg1.png')]">
+    <section class=" bg-center bg-no-repeat bg-[url('/imagens/background/bg1.png')]">
 
-      <div class="w-full h-28 overflow-hidden">
+      <div class=" h-28 overflow-hidden ">
 
-        <div id="img" class="flex transition-transform duration-500 ease-in-out transform translate-x-full">
-
-          <img src="imagens/logo/logo-purple1.png" alt="logo 1">
-          <img src="imagens/logo/logo-purple2.png" alt="logo 2">
-          <img src="imagens/logo/logo-purple3.png" alt="logo 3">
-          <img src="imagens/logo/logo-purple4.png" alt="logo 4">
-          <img src="imagens/logo/logo-purple5.png" alt="logo 5">
-          <img src="imagens/logo/logo-purple6.png" alt="logo 6">
-
-          <img src="imagens/logo/logo-purple1.png" alt="logo 1">
-          <img src="imagens/logo/logo-purple2.png" alt="logo 1">
-          <img src="imagens/logo/logo-purple3.png" alt="logo 1">
-          <img src="imagens/logo/logo-purple4.png" alt="logo 1">
-          <img src="imagens/logo/logo-purple5.png" alt="logo 1">
-          <img src="imagens/logo/logo-purple6.png" alt="logo 1">         
-        
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">0</li>
+              <li class="glide__slide">1</li>
+              <li class="glide__slide">2</li>
+            </ul>
+          </div>
         </div>
+
+        <!-- <div id="img" class="glide__track flex justify-evenly " data-glide-el="track">
+          
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img  src="imagens/logo/logo-purple1.png" alt="logo 1">
+            </li>
+            
+            <li class="glide__slide">
+              <img  src="imagens/logo/logo-purple2.png" alt="logo 2">
+            </li>
+            
+            <li class="glide__slide">
+              <img  src="imagens/logo/logo-purple3.png" alt="logo 3">
+            </li>
+            
+            <li class="glide__slide">
+              <img  src="imagens/logo/logo-purple4.png" alt="logo 4">
+            </li>
+            
+            <li class="glide__slide">
+              <img  src="imagens/logo/logo-purple5.png" alt="logo 5">
+            </li>
+            
+            <li class="glide__slide">
+              <img  src="imagens/logo/logo-purple6.png" alt="logo 6">
+            </li>      
+            
+            
+          </ul>         
+        
+        </div> -->
 
       </div>
 
@@ -2747,6 +2777,7 @@
 
     <!--ARQUIVOS JAVASCRIPT-->
     <script src="Javascript/arquivo01.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
   </body>
 </html>

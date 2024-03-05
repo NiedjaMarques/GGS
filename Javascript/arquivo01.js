@@ -71,41 +71,43 @@ function openOptions(id){
 }
 
 //função carrossel com imagens
-const imgs = document.getElementById("img"); //div geral
-const img = document.querySelectorAll("#img img"); //div imagens
+// const imgs = document.getElementById("img"); //div geral
+// const img = document.querySelectorAll("#img img"); //div imagens
 
-let índiceImg = 0;
+// let índiceImg = 0;
 
-function carrossel(){
-  índiceImg++;
+// function carrossel(){
+//   índiceImg++;
 
-  if (índiceImg >= img.length) {
-    índiceImg = 0; 
-  }
+//   if (índiceImg >= img.length) {
+//     índiceImg = 0; 
+//   }
 
-  // Calcula a posição de translação
-  const translateValue = índiceImg * img[0].clientWidth;
+//   // Calcula a posição de translação
+//   const translateValue = índiceImg * img[0].clientWidth;
 
-  console.log(índiceImg , translateValue);
+//   console.log(índiceImg , translateValue);
 
-  //parei aqui, existe um padrão que pula de 105 em 105 de largura pra cada foto
+//   //Existe um padrão que pula de 105 em 105   
 
-  //entender o codigo abaixo
+//   imgs.style.transform = `translateX(${translateValue}px)`;
 
-  
+//   if (índiceImg === img.length / 2) {
 
-  imgs.style.transform = `translateX(${translateValue}px)`;
+//    setTimeout(() => {
+    
+//       imgs.style.transition = "none"; // Remove a transição
+//       índiceImg = 0;
+//       imgs.style.transform = `translate-x-full`;
 
-  if (índiceImg === img.length / 2) {
-  setTimeout(() => {
-      imgs.style.transition = "none"; // Remove a transição
-      índiceImg = 0;
-      imgs.style.transform = `translate-x-full`;
-      setTimeout(() => {
-          imgs.style.transition = "transform 0.8s ease"; // Restaura a transição
-      }, 50); // Pequeno atraso para garantir que a transição seja aplicada corretamente
-    }, 800); // Espera 0.8s para que a última imagem seja exibida completamente antes de reiniciar
-  }
-}
+//       setTimeout(() => {
+//         imgs.style.transition = "transform 0.8s ease"; // Restaura a transição
+//       }, 50); // Pequeno atraso para garantir que a transição seja aplicada corretamente
+//     }, 800); // Espera 0.8s para que a última imagem seja exibida completamente antes de reiniciar
+//   }
+// }
 
-setInterval(carrossel, 2000);
+// setInterval(carrossel, 2000);
+
+
+  new Glide('.glide').mount();
