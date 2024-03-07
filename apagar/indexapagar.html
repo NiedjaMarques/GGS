@@ -3,118 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        min-height: 100vh;
-      }
-
-      .carrossel {
-        box-shadow: 2px 2px 4px rgb(176, 175, 175);
-        overflow: hidden;
-        height: 100px;
-        width: 100%;
-      }
-
-      .container {
-        display: flex;
-        transition: transform 0.5s ease;
-        transform: translateX(0);
-      }
-
-      img {
-        background-color: rgb(153, 224, 227);
-        object-fit: cover;
-        height: 100px;
-        width: 200px;
-      }
-
-      .hover{
-        display: "";
-      }
-
-    </style>
   </head>
-  <body>
+  <body class="">
 
-    <div class="carrossel">
+    <!--container-->
+    <div class="contAiner bg-amber-200 min-h-screen flex justify-center items-center overflow-hidden">
 
-      <div class="container" id="img">
+    <!--carousel-->
+      <div class="carousel bg-blue-100 flex justify-evenly items-center w-screen flex-nowrap">
 
-        <img style="background-color: brown;" src="../imagens/logo/logo-purple1.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-light5.png" alt="logo 2"/> 
+        <img class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700" src="../imagens/logo/logo-purple1.png" alt="logo 1">
 
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple6.png" alt="logo 2"/>
+        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
+          <img class="p-2" src="../imagens/logo/logo-purple2.png" alt="logo 2">
+        </div>
 
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
+          <img class="p-2" src="../imagens/logo/logo-purple3.png" alt="logo 3">
+        </div>
 
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple2.png" alt="logo 2"/>  
+        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
+          <img class="p-2" src="../imagens/logo/logo-purple4.png" alt="logo 4">
+        </div>
 
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple3.png" alt="logo 2"/>
+        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
+          <img class="p-2" src="../imagens/logo/logo-purple5.png" alt="logo 5">
+        </div>
 
-        <img src="../imagens/logo/logo-purple1.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple4.png" alt="logo 2"/> 
+        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
+          <img class="p-2" src="../imagens/logo/logo-purple6.png" alt="logo 6">
+        </div>
 
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple1.png" alt="logo 2"/>
-
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple6.png" alt="logo 2"/>
-
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple5.png" alt="logo 2"/>  
-             
-        <img src="../imagens/logo/logo-purple2.png" alt="logo 1"/>
-        <img class="hover" src="../imagens/logo/logo-purple4.png" alt="logo 2"/>           
-        
-      </div>
+      </div>     
 
     </div>
 
     <script>
-      const imgs = document.getElementById("img");
-      const img = document.querySelectorAll("#img img");
+      const contAiner = document.querySelector('.contAiner');
+      const carousel = document.querySelector('.carousel');
+      const imagens = document.querySelectorAll('.carousel img');
 
-      let idx = 0;
+      let index = 0;
 
-      setInterval(carrossel, 1800);
+      function moveCarousel() {
+        // Atualiza o índice para a próxima imagem
+        index++;
 
-      function carrossel(){
-            idx++;
-
-            if (idx >= img.length) {
-                idx = 0;
-            }
-
-            // Calcula a posição de translação
-            const translateValue = -idx * img[0].clientWidth;
-
-            imgs.style.transform = `translateX(${translateValue}px)`;
-
-            if (idx === img.length / 2) {
-            setTimeout(() => {
-                imgs.style.transition = "none"; // Remove a transição
-                idx = 0;
-                imgs.style.transform = `translateX(0)`;
-                setTimeout(() => {
-                    imgs.style.transition = "transform 0.8s ease"; // Restaura a transição
-                }, 50); // Pequeno atraso para garantir que a transição seja aplicada corretamente
-            }, 800); // Espera 0.8s para que a última imagem seja exibida completamente antes de reiniciar
+        // Verifica se ultrapassou o número de imagens, volta para o início
+        if (index >= imagens.length) {
+            index = 0;
         }
-        }
-        
+
+        // Calcula o deslocamento horizontal com base no índice atual e na largura de uma imagem
+        const offset = -index * imagens[0].clientWidth;
+
+        // Atualiza a posição do carrossel para o deslocamento calculado
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
+
+      // Chama a função moveCarousel a cada 2 segundos
+      setInterval(moveCarousel, 2000);
+
+      
     </script>
+
+    <!--     
+    <div id="carrossel" class="drop-shadow-2xl overflow-hidden w-[1250px] h-[570px]">
+      <div id="container"
+        class="flex transition-all duration-700 ease-in-out translate-x-0"
+      >
+        <img
+          class="w-[90px] h-[60px]"
+          src="../imagens/logo/logo-purple1.png"
+          alt="..."
+        />
+        <img
+          class="w-[90px] h-[60px]"
+          src="../imagens/logo/logo-purple2.png"
+          alt="..."
+        />
+        <img
+          class="w-[90px] h-[60px]"
+          src="../imagens/logo/logo-purple3.png"
+          alt="..."
+        />
+        <img
+          class="w-[90px] h-[60px]"
+          src="../imagens/logo/logo-purple4.png"
+          alt="..."
+        />
+        <img
+          class="w-[90px] h-[60px]"
+          src="../imagens/logo/logo-purple5.png"
+          alt="..."
+        />
+        <img
+          class="w-[90px] h-[60px]"
+          src="../imagens/logo/logo-purple6.png"
+          alt="..."
+        />
+      </div>
+    </div>
+
+    <script>
+      const box = document.querySelector("#container");
+      const img = document.querySelectorAll("#container img");
+
+      let contador = 0;
+
+      function slider() {
+        contador++;
+
+        if (contador > img.length -1) {
+          contador = 0;
+        }
+
+        box.style.tranform = `translateX(${contador * 1250}px)`
+      }
+
+      setInterval(slider, 2000);
+    </script> -->
   </body>
 </html>

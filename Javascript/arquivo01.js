@@ -59,47 +59,17 @@ function openNav() {
 }
 
 //Abrindo opções do submenu - PARAMETRO DINAMICO
-function openOptions(id){
+function openOptions(id) {
   let submenu = document.getElementById(id);
 
-  if (submenu.style.display === 'none' || submenu.style.display === ''){
+  if (submenu.style.display === "none" || submenu.style.display === "") {
     submenu.style.display = "block";
-  }else{
+  } else {
     submenu.style.display = "none";
-  } 
-  
+  }
 }
 
 //função carrossel com imagens
-// const imgs = document.getElementById("img"); //div geral
-// const img = document.querySelectorAll("#img img"); //div imagens
-
-// let índiceImg = 0;
-
-// function carrossel(){
-//   índiceImg++;
-
-//   if (índiceImg >= img.length) {
-//     índiceImg = 0; 
-//   }
-
-//   // Calcula a posição de translação
-//   const translateValue = índiceImg * img[0].clientWidth;
-
-//   console.log(índiceImg , translateValue);
-
-//   //Existe um padrão que pula de 105 em 105   
-
-//   imgs.style.transform = `translateX(${translateValue}px)`;
-
-//   if (índiceImg === img.length / 2) {
-
-//    setTimeout(() => {
-    
-//       imgs.style.transition = "none"; // Remove a transição
-//       índiceImg = 0;
-//       imgs.style.transform = `translate-x-full`;
-
 //       setTimeout(() => {
 //         imgs.style.transition = "transform 0.8s ease"; // Restaura a transição
 //       }, 50); // Pequeno atraso para garantir que a transição seja aplicada corretamente
@@ -108,6 +78,3 @@ function openOptions(id){
 // }
 
 // setInterval(carrossel, 2000);
-
-
-  new Glide('.glide').mount();
