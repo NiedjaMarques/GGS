@@ -6,124 +6,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
-  <body class="">
+  <body>
 
-    <!--container-->
-    <div class="contAiner bg-amber-200 min-h-screen flex justify-center items-center overflow-hidden">
+    <div class="bg-amber-200 flex justify-center items-center h-screen overflow-hidden">
 
-    <!--carousel-->
-      <div class="carousel bg-blue-100 flex justify-evenly items-center w-screen flex-nowrap">
+      <div class="carousel flex justify-evenly items-center min-h-[6.25rem] bg-amber-300 flex-nowrap ">
 
-        <img class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700" src="../imagens/logo/logo-purple1.png" alt="logo 1">
-
-        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
-          <img class="p-2" src="../imagens/logo/logo-purple2.png" alt="logo 2">
+        <!-- descobrir como juntar animação com o translate isso vai ajudar no efeito carrossel ifinito que o animate possui, e a responsividade e visibilidade quando aparecer um nova foto no container, talvez o block não sirva pois o objetivo não é aparecer de supetão, verificar responsividade  -->
+        <div class="carousel-item mx-[1.344rem] my-[0.437rem] hidden sm:transition sm:duration-700 sm:ease-in sm:block ">
+          <img class="min-w-[5.625rem]" src="../imagens/logo/logo-purple1.png" alt="logo 1">
         </div>
 
-        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
-          <img class="p-2" src="../imagens/logo/logo-purple3.png" alt="logo 3">
+        <div class="carousel-item mx-[1.344rem] my-[0.437rem] hidden ">
+          <img class="min-w-[5.625rem]" src="../imagens/logo/logo-purple2.png" alt="logo 2">
         </div>
 
-        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
-          <img class="p-2" src="../imagens/logo/logo-purple4.png" alt="logo 4">
+        <div class="carousel-item mx-[1.344rem] my-[0.437rem] hidden ">
+          <img class="min-w-[5.625rem]" src="../imagens/logo/logo-purple3.png" alt="logo 3">
         </div>
 
-        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
-          <img class="p-2" src="../imagens/logo/logo-purple5.png" alt="logo 5">
+        <div class="carousel-item mx-[1.344rem] my-[0.437rem] hidden ">
+          <img class="min-w-[5.625rem]" src="../imagens/logo/logo-purple4.png" alt="logo 4">
         </div>
 
-        <div class="hover:transition hover:translate-x-12 hover:ease-in hover:duration-700">
-          <img class="p-2" src="../imagens/logo/logo-purple6.png" alt="logo 6">
+        <div class="carousel-item mx-[1.344rem] my-[0.437rem]">
+          <img class="min-w-[5.625rem]" src="../imagens/logo/logo-purple5.png" alt="logo 5">
         </div>
 
-      </div>     
+        <div class="carousel-item mx-[1.344rem] my-[0.437rem]">
+          <img class="min-w-[5.625rem]" src="../imagens/logo/logo-purple6.png" alt="logo 6">
+        </div>
 
-    </div>
-
-    <script>
-      const contAiner = document.querySelector('.contAiner');
-      const carousel = document.querySelector('.carousel');
-      const imagens = document.querySelectorAll('.carousel img');
-
-      let index = 0;
-
-      function moveCarousel() {
-        // Atualiza o índice para a próxima imagem
-        index++;
-
-        // Verifica se ultrapassou o número de imagens, volta para o início
-        if (index >= imagens.length) {
-            index = 0;
-        }
-
-        // Calcula o deslocamento horizontal com base no índice atual e na largura de uma imagem
-        const offset = -index * imagens[0].clientWidth;
-
-        // Atualiza a posição do carrossel para o deslocamento calculado
-        carousel.style.transform = `translateX(${offset}px)`;
-      }
-
-      // Chama a função moveCarousel a cada 2 segundos
-      setInterval(moveCarousel, 2000);
-
-      
-    </script>
-
-    <!--     
-    <div id="carrossel" class="drop-shadow-2xl overflow-hidden w-[1250px] h-[570px]">
-      <div id="container"
-        class="flex transition-all duration-700 ease-in-out translate-x-0"
-      >
-        <img
-          class="w-[90px] h-[60px]"
-          src="../imagens/logo/logo-purple1.png"
-          alt="..."
-        />
-        <img
-          class="w-[90px] h-[60px]"
-          src="../imagens/logo/logo-purple2.png"
-          alt="..."
-        />
-        <img
-          class="w-[90px] h-[60px]"
-          src="../imagens/logo/logo-purple3.png"
-          alt="..."
-        />
-        <img
-          class="w-[90px] h-[60px]"
-          src="../imagens/logo/logo-purple4.png"
-          alt="..."
-        />
-        <img
-          class="w-[90px] h-[60px]"
-          src="../imagens/logo/logo-purple5.png"
-          alt="..."
-        />
-        <img
-          class="w-[90px] h-[60px]"
-          src="../imagens/logo/logo-purple6.png"
-          alt="..."
-        />
       </div>
+
     </div>
-
-    <script>
-      const box = document.querySelector("#container");
-      const img = document.querySelectorAll("#container img");
-
-      let contador = 0;
-
-      function slider() {
-        contador++;
-
-        if (contador > img.length -1) {
-          contador = 0;
-        }
-
-        box.style.tranform = `translateX(${contador * 1250}px)`
-      }
-
-      setInterval(slider, 2000);
-    </script> -->
+      
   </body>
+
 </html>
