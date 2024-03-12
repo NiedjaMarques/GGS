@@ -6,12 +6,6 @@
     <title>Samar - HTML Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <!-- Required Core Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-
-    <!-- Optional Theme Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <style>
       * {
         outline: none;
@@ -2480,13 +2474,14 @@
     </div>
 
     <!--AREA DOS SERVIÇOS QUE OFERECEMOS VER COM DEYVISSON-->
-    <section class="bg-pink-400 bg-center bg-cover bg-no-repeat bg-[url('/imagens/background/bg1.png')] pt-10">
+    <section class="bg-center bg-cover bg-no-repeat bg-[url('/imagens/background/bg1.png')] pt-10">
 
       <!-- div 1 carrossel geral -->
-      <div class="c-carrossel h-28 overflow-hidden bg-blue-400 ">
+      <!-- <div class="c-carrossel h-28 overflow-hidden ">
 
-        <!-- div 2 slides carrossel -->
-        <div class="c-carrossel__slides js-carousel--simple bg-green-400">
+         div 2 slides carrossel 
+
+          <div class="c-carrossel__slides js-carousel--simple ">
 
           <img class="c-carrossel__slide flex justify-center items-center w-24 h-14" src="imagens/logo/logo-purple1.png" alt="logo 1">                
           <img class="hidden" src="imagens/logo/logo-light1.png" alt="logo 1"> 
@@ -2503,144 +2498,97 @@
           
         </div>
 
-        <!-- 
-           div 1 carrossel geral 
-      <div class="c-carrossel h-28 overflow-hidden bg-blue-400 ">
+      </div> -->
 
-         div 2 slides carrossel 
-        <div class="c-carrossel__slides js-carousel--simple flex justify-evenly items-center bg-green-400">
-
-          <img class="c-carrossel__slide w-24 h-14 " src="imagens/logo/logo-purple1.png" alt="logo 1">                
-          <img class="hidden" src="imagens/logo/logo-light1.png" alt="logo 1"> 
-          <img class="c-carrossel__slide w-24 h-14" src="imagens/logo/logo-purple2.png" alt="logo 2">
-          <img class="hidden" src="imagens/logo/logo-light2.png" alt="logo 2">
-          <img class="c-carrossel__slide w-24 h-14" src="imagens/logo/logo-purple3.png" alt="logo 3">
-          <img class="hidden" src="imagens/logo/logo-light3.png" alt="logo 3">
-          <img class="c-carrossel__slide w-24 h-14" src="imagens/logo/logo-purple4.png" alt="logo 4">
-          <img class="hidden" src="imagens/logo/logo-light4.png" alt="logo 4"> 
-          <img class="c-carrossel__slide w-24 h-14" src="imagens/logo/logo-purple5.png" alt="logo 5">
-          <img class="hidden" src="imagens/logo/logo-light5.png" alt="logo 5">
-          <img class="c-carrossel__slide w-24 h-14" src="imagens/logo/logo-purple6.png" alt="logo 6">
-          <img class="hidden" src="imagens/logo/logo-light6.png" alt="logo 6">   
-          
-        </div>
-
-          <div class=" md:px-5 md:py-5 my-1.5 md:my-0 hover:rounded-md hover:bg-indigo-400">
-
-            <img class="c-carrossel__slide w-24 h-14" src="imagens/logo/logo-purple6.png" alt="logo 6">
-            <img class="hidden" src="imagens/logo/logo-light6.png" alt="logo 6">
-
-          </div> -->
-
-      </div>
-
-      <!--service-->
+      <!--service icones -->
       <div class="pt-14">
 
-        <div class="container px-4 mx-auto">
+        <div class="container px-4 mx-auto flex flex-col">
 
-          <div class="text-center mb-8">
+          <div class="text-center mb-8 flex justify-center items-center">
+          
+            <div class="">
+            
+              <h6 class="text-lg text-gray-500 font-semibold">
+                SERVICES
+              </h6>
 
-            <h6 class="text-lg text-gray-500/100 font-bold">
+              <h2 class="text-3xl sm:text-4xl md:text-5xl mb-2 font-extrabold">
+                PROVIDE AWESOME SERVICE
+              </h2>
 
-              SERVICES
-
-            </h6>
-
-            <h2 class="text-3xl sm:text-4xl md:text-5xl mb-2 font-extrabold">
-
-              PROVIDE AWESOME SERVICE
-
-            </h2>
+            </div>
 
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center"><!--flex flex-nowrap items-center justify-center md:flex-row -->
+          <!-- area dos icones -->
+          <div class="flex flex-col sm:flex-row justify-center items-center">
 
-            <div class="px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
 
-              <div class="transition-all duration-500 hover:shadow-lg flex flex-col justify-center items-center py-8 mb-8 px-4"><!--relative z-[1]  -->
+              <div class="transition-all duration-500 hover:shadow-lg flex flex-col justify-center items-center py-8 mb-8 px-4 text-center border border-gray-200">                
 
-                <div class="mt-6 mb-11"><!-- text-center mt-6 mb-11 relative inline-block h-[90px] w-[90px] z-[1]-->
+                <div class="mt-6 mb-11 flex justify-center">
 
-                  <a href="" class="">
-
-                    <img class="bg-yellow-500 rounded-lg" width="80" height="80" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-folder-cloud-data-technology-and-network-technology-flatart-icons-outline-flatarticons-2.png" alt="external-folder"/>
-
-                  </a>
+                  <img class="bg-yellow-500 rounded-full w-20 h-20" src="../imagens/COMPUTADOR.png" alt="external-folder"/> 
 
                 </div>
 
                 <div>
 
-                  <h4 class="mb-4 text-xl font-bold text-center">
-                    Strategy & Researc
+                  <h4 class="mb-4 text-xl font-bold">
+                  Strategy & Researc
                   </h4>
 
-                  <p class="text-base text-gray-600/100 text-center">
-                    Fusce sit amet dui vitae urna tristique imperdiet. Donec
-                    eget sapien euismod, faucibus nibh non, consequat elit.
+                  <p class="text-base text-gray-600/100">
+                  Fusce sit amet dui vitae urna tristique imperdiet. Donec
+                  eget sapien euismod, faucibus nibh non, consequat elit.
                   </p>
 
                 </div>
 
               </div>
 
-            </div>
+              <div class="transition-all duration-500 hover:shadow-lg flex flex-col justify-center items-center py-8 mb-8 px-4 text-center border border-gray-200">
 
-            <div class="px-4">
+                <div class="mt-6 mb-11 flex justify-center">
 
-              <div class="transition-all duration-500 hover:shadow-lg flex flex-col justify-center items-center py-8 mb-8 px-4">
-
-                <div class="mt-6 mb-11">
-
-                  <a href="">
-
-                    <img class="bg-pink-700 rounded-lg" width="80" height="80" src="https://img.icons8.com/dotty/80/internet-browser.png" alt="internet-browser"/>
-
-                  </a>
+                  <img class="bg-pink-700 rounded-full w-20 h-20" src="../imagens/seta.png" alt="internet-browser"/>
 
                 </div>
 
                 <div class="">
 
-                  <h4 class="mb-4 text-xl font-bold text-center">
-                    Web Development
+                  <h4 class="mb-4 text-xl font-bold">
+                  Web Development
                   </h4>
 
-                  <p class="text-base text-gray-600/100 text-center">
-                    Fusce sit amet dui vitae urna tristique imperdiet. Donec
-                    eget sapien euismod, faucibus nibh non, consequat elit.
+                  <p class="text-base text-gray-600/100">
+                  Fusce sit amet dui vitae urna tristique imperdiet. Donec
+                  eget sapien euismod, faucibus nibh non, consequat elit.
                   </p>
 
                 </div>
 
               </div>
 
-            </div>
+              <div class="lg:col-auto md:col-span-2 md:w-2/4 md:mx-auto lg:w-full lg:transition-none transition-all duration-500 hover:shadow-lg flex flex-col justify-center items-center py-8 mb-8 px-4 text-center border border-gray-200">
 
-            <div class="px-4">
+                <div class="mt-6 mb-11 flex justify-center">
 
-              <div class="transition-all duration-500 hover:shadow-lg flex flex-col justify-center items-center py-8 mb-8 px-4">
-
-                <div class="mt-6 mb-11">
-
-                  <a href="">
-                    <img class="bg-green-700 rounded-lg" width="80" height="80" src="https://img.icons8.com/ios/50/web.png" alt="web"/>
-
-                  </a>
+                  <img class="bg-green-700 rounded-full w-20 h-20" src="../imagens/layout-do-site.png" alt="web"/>
 
                 </div>
 
                 <div class="">
 
-                  <h4 class="mb-4 text-xl font-bold text-center">
-                    Web Solution
+                  <h4 class="mb-4 text-xl font-bold">
+                  Web Solution
                   </h4>
 
-                  <p class="text-base text-gray-600/100 text-center">
-                    Fusce sit amet dui vitae urna tristique imperdiet. Donec
-                    eget sapien euismod, faucibus nibh non, consequat elit.
+                  <p class="text-base text-gray-600/100">
+                  Fusce sit amet dui vitae urna tristique imperdiet. Donec
+                  eget sapien euismod, faucibus nibh non, consequat elit.
                   </p>
 
                 </div>
@@ -2653,7 +2601,7 @@
 
         </div>
 
-      </div>
+    </div>
 
     </section>
 
@@ -2714,7 +2662,5 @@
 
     <!--ARQUIVOS JAVASCRIPT-->
     <script src="Javascript/arquivo01.js"></script>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-
   </body>
 </html>
