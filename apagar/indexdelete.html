@@ -30,10 +30,10 @@
 
                     <ul class="text-gray-500/100 font-medium flex flex-wrap justify-center items-center">
                         
-                        <li class="m-2 bg-indigo-500 rounded-full p-1 shadow-md shadow-indigo-500 ">
+                        <li id="button1" class="m-2">
                             <input type="radio" hidden name="" id="">
 
-                            <a href="#" class="filter-button py-2 px-3 text-white" data-filter="all">
+                            <a href="#" class="filter-button py-2 px-3" data-filter="all">
                                 All
                             </a>
 
@@ -83,40 +83,57 @@
     
                 </div>
 
-                <div class="flex items-center justify-center flex-row">
-                    <ul id="imgsList" class="">
+                <div class="">
+                    <ul id="imgsList" class="flex items-center justify-center flex-wrap gap-4">
                         
-                        <li class="web_design px-4 mb-2">    
-                            <img src="../imagens/projects/pic1.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex">
+                            <li class="web_design seo">
+                                <img class="rounded-sm max-h-[316.481px] max-w-[437.826px]" src="../imagens/projects/pic1.jpg" alt="...">
+                            </li>
+                        </div>
 
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic5.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex ">
+                            <li class="mobile_app">    
+                                <img class="rounded-sm max-h-[627.337px] max-w-[437.826px]" src="../imagens/projects/pic5.jpg" alt="...">
+                            </li>
+                        </div>
 
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic2.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex">
+                            <li class="branding">    
+                                <img class="rounded-sm max-h-[316.481px] max-w-[437.826px]" src="../imagens/projects/pic2.jpg" alt="...">
+                            </li>
+                        </div>
 
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic6.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex">
+                            <li class="web_development">    
+                                <img class="rounded-sm max-h-[627.337px] max-w-[437.826px]" src="../imagens/projects/pic6.jpg" alt="...">
+                            </li>
+                        </div>
+                        
+                        <div class="inline-flex">
+                            <li class="self-start">    
+                                <img class="rounded-sm max-h-[316.481px] max-w-[437.826px]" src="../imagens/projects/pic3.jpg" alt="...">
+                            </li>
+                        </div>
 
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic7.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex">
+                            <li class="seo">    
+                                <img class="rounded-sm max-h-[627.337px] max-w-[437.826px]" src="../imagens/projects/pic7.jpg" alt="...">
+                            </li>
+                        </div>                        
 
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic8.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex">
+                            <li class="web_development">    
+                                <img class="rounded-sm max-h-[316.481px] max-w-[437.826px]" src="../imagens/projects/pic4.jpg" alt="...">
+                            </li>
+                        </div>                        
 
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic3.jpg" alt="...">
-                        </li>
-
-                        <li class="px-4 mb-2">    
-                            <img src="../imagens/projects/pic4.jpg" alt="...">
-                        </li>
+                        <div class="inline-flex">
+                            <li class="web_development">    
+                                <img class="rounded-sm max-h-[627.337px] max-w-[437.826px]" src="../imagens/projects/pic8.jpg" alt="...">
+                            </li>
+                        </div>
+                        
                     </ul>
                 </div>
     
@@ -124,8 +141,8 @@
 
         </div>
 
-    </section> 
-
+    </section>  
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             //todos os botões de filtro
@@ -134,18 +151,24 @@
             //todas as imagens de projeto
             const imagens = document.querySelectorAll("#imgsList li");
 
+            const meuBtn = document.getElementById("button1");
+            meuBtn.classList.add("bg-indigo-500", "text-white", "rounded-full", "shadow-md", "shadow-indigo-500");
+
             //ouvinte de evento de clique a cada botão de filtro
             filterBtn.forEach(button => {
                 button.addEventListener("click", function() {
                     const filterValue = this.getAttribute("data-filter");
 
                     // Atualize o estilo do botão clicado para indicar seleção
-                    filterBtn.forEach(button => {
+                    filterBtn.forEach(button => {     
+                        meuBtn.classList.remove("bg-indigo-500", "text-white", "rounded-full", "shadow-md", "shadow-indigo-500");         
+                        
                         button.classList.remove("bg-indigo-500", "text-white", "rounded-full", "shadow-md", "shadow-indigo-500");
                     });
 
                     this.classList.add("bg-indigo-500", "text-white", "rounded-full", "shadow-md", "shadow-indigo-500");
                     //  bg-indigo-500 rounded-full p-1 shadow-md shadow-indigo-500
+                    
 
                     // Exiba as imagens de acordo com a categoria correspondente ao botão clicado
                     if (filterValue === "all") {
